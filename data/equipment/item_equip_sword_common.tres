@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EquipData" load_steps=3 format=3 uid="uid://dy7ma7fgvubm5"]
+
+[ext_resource type="Texture2D" uid="uid://bxbwrilmmllpo" path="res://Sprites/Equipment/placeholder_weapon.png" id="1_h3cka"]
+[ext_resource type="Script" uid="uid://cfjx51u8cmu4g" path="res://data/equipment/equip_data.gd" id="2_wbqny"]
+
+[resource]
+script = ExtResource("2_wbqny")
+equip_type = 0
+type = 4
+is_consumable = false
+max_stack = 1
+value = 0.0
+icon = ExtResource("1_h3cka")
+id = "equip_sword"
+name = "Common Sword"
+description = ""
+price = 20
+metadata/_custom_type_script = "uid://cfjx51u8cmu4g"

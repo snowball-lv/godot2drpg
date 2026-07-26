@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EquipData" load_steps=3 format=3 uid="uid://clxtenynd5wpx"]
+
+[ext_resource type="Texture2D" uid="uid://bf3kx0rce6k0x" path="res://Sprites/Equipment/placeholder_helmet.png" id="1_17r2g"]
+[ext_resource type="Script" uid="uid://cfjx51u8cmu4g" path="res://data/equipment/equip_data.gd" id="2_h0n4b"]
+
+[resource]
+script = ExtResource("2_h0n4b")
+equip_type = 0
+type = 4
+is_consumable = false
+max_stack = 1
+value = 0.0
+icon = ExtResource("1_17r2g")
+id = "equip_legs"
+name = "Common Legs"
+description = ""
+price = 20
+metadata/_custom_type_script = "uid://cfjx51u8cmu4g"

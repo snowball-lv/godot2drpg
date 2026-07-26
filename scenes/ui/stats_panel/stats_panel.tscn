@@ -1,0 +1,230 @@
+[gd_scene load_steps=11 format=3 uid="uid://ctr2bjctb1kg2"]
+
+[ext_resource type="Script" uid="uid://ccbysb4pnmjwb" path="res://scenes/ui/stats_panel/stats_panel.gd" id="1_6web6"]
+[ext_resource type="Texture2D" uid="uid://bltswclxeltyo" path="res://Sprites/Plus.png" id="1_il4kf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w25xm"]
+bg_color = Color(0.137255, 0.164706, 0.207843, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.101961, 0.113725, 0.14902, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w25xm"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_my0xt"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_fwvjp"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_xbtnt"]
+font_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sg37"]
+bg_color = Color(0.419277, 0.988312, 0.455476, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vky2r"]
+bg_color = Color(0.106645, 0.363215, 0.128535, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwdo8"]
+bg_color = Color(0.235294, 0.784314, 0.290196, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="StatsPanel" type="PanelContainer"]
+custom_minimum_size = Vector2(215, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_w25xm")
+script = ExtResource("1_6web6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Stats"
+
+[node name="Control" type="Control" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="DamageLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "DMG: 100"
+label_settings = SubResource("LabelSettings_w25xm")
+
+[node name="HPLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "HP: 20"
+label_settings = SubResource("LabelSettings_w25xm")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VelLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "VEL: 80"
+label_settings = SubResource("LabelSettings_w25xm")
+
+[node name="ManaLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Mana: 50"
+label_settings = SubResource("LabelSettings_w25xm")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CritLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "CRIT: 15%"
+label_settings = SubResource("LabelSettings_w25xm")
+
+[node name="CritDMGLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "C. DMG: 20"
+label_settings = SubResource("LabelSettings_w25xm")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.219608, 0.231373, 0.290196, 1)
+
+[node name="Control2" type="Control" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="CurrentLevelLabel" type="Label" parent="MarginContainer/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 5"
+label_settings = SubResource("LabelSettings_my0xt")
+horizontal_alignment = 1
+
+[node name="CurrentPointsLabel" type="Label" parent="MarginContainer/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Points: 4"
+label_settings = SubResource("LabelSettings_fwvjp")
+
+[node name="Attributes" type="VBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox/Attributes"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer"]
+layout_mode = 2
+text = "Strength"
+label_settings = SubResource("LabelSettings_xbtnt")
+
+[node name="STRPointsLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+label_settings = SubResource("LabelSettings_xbtnt")
+
+[node name="STRButton" type="Button" parent="MarginContainer/VBox/Attributes/HBoxContainer"]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_3sg37")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vky2r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwdo8")
+icon = ExtResource("1_il4kf")
+icon_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBox/Attributes"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer2"]
+layout_mode = 2
+text = "Dexterity"
+label_settings = SubResource("LabelSettings_xbtnt")
+
+[node name="DEXPointsLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+label_settings = SubResource("LabelSettings_xbtnt")
+
+[node name="DEXButton" type="Button" parent="MarginContainer/VBox/Attributes/HBoxContainer2"]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_3sg37")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vky2r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwdo8")
+icon = ExtResource("1_il4kf")
+icon_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBox/Attributes"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer3"]
+layout_mode = 2
+text = "Intelligence"
+label_settings = SubResource("LabelSettings_xbtnt")
+
+[node name="INTPointsLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+label_settings = SubResource("LabelSettings_xbtnt")
+
+[node name="INTButton" type="Button" parent="MarginContainer/VBox/Attributes/HBoxContainer3"]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_3sg37")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vky2r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwdo8")
+icon = ExtResource("1_il4kf")
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBox/Attributes/HBoxContainer/STRButton" to="." method="_on_str_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/Attributes/HBoxContainer2/DEXButton" to="." method="_on_dex_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/Attributes/HBoxContainer3/INTButton" to="." method="_on_int_button_pressed"]

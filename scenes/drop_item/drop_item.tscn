@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://dd2leqlr3noiy"]
+
+[ext_resource type="Script" uid="uid://co2rktytk8eso" path="res://scenes/drop_item/drop_item.gd" id="1_b85kn"]
+[ext_resource type="Texture2D" uid="uid://l58lkiu042xv" path="res://Sprites/Actor/Characters/Shadow.png" id="2_ft433"]
+[ext_resource type="Shader" uid="uid://c7cdtto11uitx" path="res://resources/shaders/shine.gdshader" id="3_ft433"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_36oub"]
+shader = ExtResource("3_ft433")
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/shine_progress = 0.0
+shader_parameter/shine_size = 0.1
+shader_parameter/shine_angle = 45.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tk0fi"]
+radius = 7.0
+
+[sub_resource type="Animation" id="Animation_lac7t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -7)]
+}
+
+[sub_resource type="Animation" id="Animation_h53yj"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -7), Vector2(0, -9), Vector2(0, -7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65td7"]
+_data = {
+&"RESET": SubResource("Animation_lac7t"),
+&"idle": SubResource("Animation_h53yj")
+}
+
+[node name="DropItem" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_b85kn")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.196078)
+texture = ExtResource("2_ft433")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_36oub")
+position = Vector2(0, -7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_tk0fi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_65td7")
+}
+autoplay = "idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

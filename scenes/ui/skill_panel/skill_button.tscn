@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfaosuaywyx22"]
+
+[ext_resource type="Texture2D" uid="uid://bweydwh8hi2hw" path="res://Sprites/Ui/Skill Icon/Meteo/Rain.png" id="1_20ina"]
+[ext_resource type="Script" uid="uid://ci2p7vhyjjlfm" path="res://scenes/ui/skill_panel/skill_button.gd" id="1_r730s"]
+[ext_resource type="Texture2D" uid="uid://bop6wxt6vpr3k" path="res://Sprites/Lock.png" id="2_03k4w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03k4w"]
+bg_color = Color(0.521534, 0.547043, 0.627471, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r730s"]
+bg_color = Color(0.152104, 0.164497, 0.204266, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pglme"]
+bg_color = Color(0.286275, 0.305882, 0.368627, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="SkillButton" type="Button"]
+custom_minimum_size = Vector2(50, 50)
+theme_override_styles/hover = SubResource("StyleBoxFlat_03k4w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r730s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pglme")
+script = ExtResource("1_r730s")
+
+[node name="SkillIcon" type="TextureRect" parent="."]
+self_modulate = Color(0.517184, 0.517184, 0.517184, 1)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_20ina")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LockTexture" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_03k4w")
+expand_mode = 1
+stretch_mode = 5

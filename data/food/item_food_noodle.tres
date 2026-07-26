@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://7yyewm2ghff6"]
+
+[ext_resource type="Texture2D" uid="uid://c6fwit5phopep" path="res://Sprites/Items/Food/Noodle.png" id="1_3ydwl"]
+[ext_resource type="Script" uid="uid://cafwk6ut2aliu" path="res://data/item_data.gd" id="2_w2j3f"]
+
+[resource]
+script = ExtResource("2_w2j3f")
+type = 0
+is_consumable = true
+max_stack = 64
+value = 1.0
+icon = ExtResource("1_3ydwl")
+id = "food"
+name = "Noodle"
+description = ""
+price = 0
+metadata/_custom_type_script = "uid://cafwk6ut2aliu"

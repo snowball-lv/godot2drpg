@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dlrn6pc8w5nge"]
+
+[ext_resource type="Texture2D" uid="uid://cav6bn6nfxs0l" path="res://Sprites/Items/Potion/WaterPot.png" id="1_7b15p"]
+[ext_resource type="Script" uid="uid://cafwk6ut2aliu" path="res://data/item_data.gd" id="2_8hs58"]
+
+[resource]
+script = ExtResource("2_8hs58")
+type = 2
+is_consumable = true
+max_stack = 64
+value = 5.0
+icon = ExtResource("1_7b15p")
+id = "mana_potion"
+name = "Mana 5"
+description = "Restores 2 HP"
+price = 3
+metadata/_custom_type_script = "uid://cafwk6ut2aliu"
