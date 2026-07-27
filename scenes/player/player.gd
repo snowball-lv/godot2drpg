@@ -36,14 +36,17 @@ var curr_points: int = 0
 var curr_mana: float
 var last_direction: String = "down"
 
+var strength_value: int = 0
+var dexterity_value: int = 0
+var intelligence_value: int = 0
+
 func _process(delta: float) -> void:
 	if fsm.curr_state:
 		fsm.curr_state.process_state(delta)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
-		health_component.take_damage(1)
-		use_mana(2)
+		add_exp(10)
 
 func is_moving() -> bool:
 	var move_input = ["move_down", "move_up", "move_left", "move_right"]
@@ -62,6 +65,36 @@ func update_direction(input_vector: Vector2) -> void:
 	
 func play_direction_anim(anim_name: String) -> void:
 	anim_sprite.play("%s_%s" % [anim_name, last_direction])
+	
+func upgrade_stat(stat_name: String) -> void:
+	if curr_points <= 0:
+		return
+	curr_points -= 1
+	match stat_name:
+		"STR":
+			strength_value += 1
+			damage += 1.5
+			max_health += 3
+			reset_health()
+		"DEX":
+			dexterity_value += 1
+			move_speed += 2
+			crit_chance += 2
+		"INT":
+			intelligence_value += 1
+			max_mana += 15
+			crit_damage += 5
+			reset_mana()
+	EventBus.on_player_stats_updated.emit()
+	
+func get_damage(skill_damage: float = 0.0) -> float:
+	var total_damage = damage + skill_damage
+	for equip: EquipData in GameData.equipment.values():
+		if equip:
+			total_damage += equip.bonus_damage
+	if randf() * 100 <= crit_chance:
+		total_damage *= 1.0 + crit_damage / 100.0
+	return total_damage
 	
 func add_exp(value: float) -> void:
 	curr_exp += value

@@ -8,7 +8,7 @@ A Godot project following a 2D RPG Udemy tutorial
 - [x] 03 Build_Town
 - [x] 04 Create_Panels_UI
 - [x] 05 Inventory
-- [ ] 06 Player_Stats
+- [x] 06 Player_Stats
 - [ ] 07 Create_Enemies
 - [ ] 08 Add_Skills
 - [ ] 09 NPCs
