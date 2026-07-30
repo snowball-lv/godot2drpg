@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://cu1w61geboej"]
+[gd_scene load_steps=50 format=4 uid="uid://cu1w61geboej"]
 
 [ext_resource type="Texture2D" uid="uid://bcuswpmg4cbuv" path="res://Sprites/Backgrounds/Tilesets/TilesetFloor.png" id="1_n11nm"]
 [ext_resource type="Script" uid="uid://cve6tac2amnip" path="res://scenes/town/town.gd" id="1_xbtnt"]
@@ -24,6 +24,9 @@
 [ext_resource type="Resource" uid="uid://rqqflq737icy" path="res://data/potions/item_hp_small_2.tres" id="21_vky2r"]
 [ext_resource type="Resource" uid="uid://dlrn6pc8w5nge" path="res://data/potions/item_mana_small_5.tres" id="23_wacgc"]
 [ext_resource type="Resource" uid="uid://dv0tvhe7whgj8" path="res://data/equipment/item_equip_helmet_common.tres" id="24_s1uhr"]
+[ext_resource type="Script" uid="uid://sofnxrfjopai" path="res://scenes/enemy/enemy_zone.gd" id="25_hhop4"]
+[ext_resource type="PackedScene" uid="uid://dtxfupn3ppqgp" path="res://scenes/enemy/enemy_mouse.tscn" id="26_o16h7"]
+[ext_resource type="PackedScene" uid="uid://bnppnlj6dhcvn" path="res://data/enemy_octopus.tscn" id="27_iu42p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gxugk"]
 texture = ExtResource("1_n11nm")
@@ -3768,6 +3771,12 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o16h7"]
+size = Vector2(108, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu42p"]
+size = Vector2(170, 104.5)
+
 [node name="Town" type="Node2D"]
 script = ExtResource("1_xbtnt")
 player_scene = ExtResource("4_06row")
@@ -3889,6 +3898,7 @@ alignment = 1
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 4
+focus_mode = 1
 theme_override_styles/hover = SubResource("StyleBoxFlat_svnup")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_yr8sw")
 theme_override_styles/normal = SubResource("StyleBoxFlat_g3yvl")
@@ -4096,6 +4106,28 @@ amount = 70
 [node name="DropItem3" parent="." instance=ExtResource("20_3sg37")]
 position = Vector2(139, -102)
 item = ExtResource("24_s1uhr")
+
+[node name="EnemyZones" type="Node2D" parent="."]
+
+[node name="Zone_1" type="Area2D" parent="EnemyZones"]
+position = Vector2(7, -12)
+script = ExtResource("25_hhop4")
+enemy_scene = ExtResource("26_o16h7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyZones/Zone_1"]
+position = Vector2(132, -331.5)
+shape = SubResource("RectangleShape2D_o16h7")
+debug_color = Color(0, 0.6, 0.701961, 0.196078)
+
+[node name="Zone_2" type="Area2D" parent="EnemyZones"]
+position = Vector2(7, -12)
+script = ExtResource("25_hhop4")
+enemy_scene = ExtResource("27_iu42p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyZones/Zone_2"]
+position = Vector2(-78, -302.25)
+shape = SubResource("RectangleShape2D_iu42p")
+debug_color = Color(0, 0.6, 0.701961, 0.196078)
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/EquipmentButton" to="HUD" method="_on_equipment_button_pressed"]
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/InventoryButton" to="HUD" method="_on_inventory_button_pressed"]
