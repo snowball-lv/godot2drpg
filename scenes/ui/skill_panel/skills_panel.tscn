@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqy53gi5jo1lo"]
+[gd_scene load_steps=13 format=3 uid="uid://dqy53gi5jo1lo"]
 
 [ext_resource type="PackedScene" uid="uid://dfaosuaywyx22" path="res://scenes/ui/skill_panel/skill_button.tscn" id="1_gdjvl"]
 [ext_resource type="Script" uid="uid://qddkjwbq44" path="res://scenes/ui/skill_panel/skills_panel.gd" id="1_iv5ke"]
+[ext_resource type="Resource" uid="uid://b6iu6mf5shq46" path="res://data/skills/skill_shuriken.tres" id="3_0osin"]
+[ext_resource type="Resource" uid="uid://cgs7vvnwvd7k5" path="res://data/skills/skill_thunder.tres" id="3_vf0q1"]
+[ext_resource type="Resource" uid="uid://datrofv55tqww" path="res://data/skills/skill_orb_plant.tres" id="4_21280"]
+[ext_resource type="Resource" uid="uid://fkimdpiqv4kx" path="res://data/skills/skill_magic_weapon.tres" id="4_fh2p2"]
+[ext_resource type="Resource" uid="uid://cp4bm7o7xlron" path="res://data/skills/skill_rock_spike.tres" id="5_if1la"]
+[ext_resource type="Resource" uid="uid://djjbrqbv4awhf" path="res://data/skills/skill_kunai.tres" id="6_mvs35"]
+[ext_resource type="Resource" uid="uid://cc7hebrpylpoc" path="res://data/skills/skill_ice..tres" id="7_chf1s"]
+[ext_resource type="Resource" uid="uid://cjwj0waccxo0v" path="res://data/skills/skill_water_canon.tres" id="9_1ijo2"]
+[ext_resource type="Resource" uid="uid://dkm0up084unn4" path="res://data/skills/skill_water_splash.tres" id="10_ncwty"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w25xm"]
 bg_color = Color(0.137255, 0.164706, 0.207843, 1)
@@ -46,6 +55,7 @@ alignment = 1
 
 [node name="SkillButton" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer" instance=ExtResource("1_gdjvl")]
 layout_mode = 2
+skill_data = ExtResource("3_vf0q1")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
 layout_mode = 2
@@ -53,6 +63,7 @@ alignment = 1
 
 [node name="SkillButton" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2" instance=ExtResource("1_gdjvl")]
 layout_mode = 2
+skill_data = ExtResource("4_21280")
 
 [node name="Control" type="Control" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(74, 0)
@@ -60,6 +71,7 @@ layout_mode = 2
 
 [node name="SkillButton2" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2" instance=ExtResource("1_gdjvl")]
 layout_mode = 2
+skill_data = ExtResource("5_if1la")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
 layout_mode = 2
@@ -68,12 +80,15 @@ alignment = 1
 
 [node name="SkillButton" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3" instance=ExtResource("1_gdjvl")]
 layout_mode = 2
+skill_data = ExtResource("6_mvs35")
 
 [node name="SkillButton2" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3" instance=ExtResource("1_gdjvl")]
 layout_mode = 2
+skill_data = ExtResource("7_chf1s")
 
 [node name="SkillButton3" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3" instance=ExtResource("1_gdjvl")]
 layout_mode = 2
+skill_data = ExtResource("3_0osin")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
 layout_mode = 2
@@ -81,6 +96,7 @@ alignment = 1
 
 [node name="SkillButton" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer4" instance=ExtResource("1_gdjvl")]
 layout_mode = 2
+skill_data = ExtResource("9_1ijo2")
 
 [node name="Control" type="Control" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer4"]
 custom_minimum_size = Vector2(74, 0)
@@ -88,6 +104,7 @@ layout_mode = 2
 
 [node name="SkillButton2" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer4" instance=ExtResource("1_gdjvl")]
 layout_mode = 2
+skill_data = ExtResource("10_ncwty")
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
 layout_mode = 2
@@ -95,3 +112,4 @@ alignment = 1
 
 [node name="SkillButton" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer5" instance=ExtResource("1_gdjvl")]
 layout_mode = 2
+skill_data = ExtResource("4_fh2p2")

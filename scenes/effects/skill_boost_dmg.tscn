@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://c3e1224nkh0m"]
+
+[ext_resource type="PackedScene" uid="uid://bvlwwphlgifs5" path="res://scenes/effects/skill_kunai.tscn" id="1_fk4r8"]
+[ext_resource type="Texture2D" uid="uid://6do5ieg1yhl4" path="res://Sprites/FX/Magic/Boost/SpriteSheet.png" id="2_2c6q0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdefl"]
+atlas = ExtResource("2_2c6q0")
+region = Rect2(0, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78waf"]
+atlas = ExtResource("2_2c6q0")
+region = Rect2(53, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv3nl"]
+atlas = ExtResource("2_2c6q0")
+region = Rect2(106, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fb3f"]
+atlas = ExtResource("2_2c6q0")
+region = Rect2(159, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlp0w"]
+atlas = ExtResource("2_2c6q0")
+region = Rect2(212, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16mvv"]
+atlas = ExtResource("2_2c6q0")
+region = Rect2(265, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwkvk"]
+atlas = ExtResource("2_2c6q0")
+region = Rect2(318, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kplnu"]
+atlas = ExtResource("2_2c6q0")
+region = Rect2(371, 0, 53, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_urvqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdefl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78waf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv3nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fb3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlp0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16mvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwkvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kplnu")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="SkillBoostDMG" instance=ExtResource("1_fk4r8")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_urvqo")

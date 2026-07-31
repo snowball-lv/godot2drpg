@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=4 format=3 uid="uid://djjbrqbv4awhf"]
+
+[ext_resource type="Texture2D" uid="uid://ct4ipm7qta4kp" path="res://Sprites/Ui/Skill Icon/Items & Weapon/Kunai.png" id="1_m3iov"]
+[ext_resource type="PackedScene" uid="uid://bvlwwphlgifs5" path="res://scenes/effects/skill_kunai.tscn" id="1_prn3o"]
+[ext_resource type="Script" uid="uid://b4pkbpbgxjjj7" path="res://data/skills/skill_data.gd" id="2_prn3o"]
+
+[resource]
+script = ExtResource("2_prn3o")
+mana_cost = 1.5
+base_dmg = 2.5
+explosion_effect = ExtResource("1_prn3o")
+icon = ExtResource("1_m3iov")
+id = "kunai"
+name = "Kunai"
+description = "Throws a fast kunai forward"
+price = 50
+metadata/_custom_type_script = "uid://b4pkbpbgxjjj7"

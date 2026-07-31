@@ -64,7 +64,7 @@ texture = ExtResource("1_20ina")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="LockTexture" type="TextureRect" parent="."]
+[node name="Lock" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 1
 anchors_preset = 8
@@ -81,3 +81,5 @@ grow_vertical = 2
 texture = ExtResource("2_03k4w")
 expand_mode = 1
 stretch_mode = 5
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

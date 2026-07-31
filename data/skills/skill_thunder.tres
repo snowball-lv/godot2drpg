@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=4 format=3 uid="uid://cgs7vvnwvd7k5"]
+
+[ext_resource type="PackedScene" uid="uid://budkdn8g6bv6m" path="res://scenes/effects/skill_thunder.tscn" id="1_hcwjg"]
+[ext_resource type="Script" uid="uid://b4pkbpbgxjjj7" path="res://data/skills/skill_data.gd" id="2_hcwjg"]
+[ext_resource type="Texture2D" uid="uid://slwd0q3tfneh" path="res://Sprites/Ui/Skill Icon/Spell/BookThunder.png" id="2_uvaxl"]
+
+[resource]
+script = ExtResource("2_hcwjg")
+mana_cost = 3.0
+base_dmg = 2.6
+explosion_effect = ExtResource("1_hcwjg")
+icon = ExtResource("2_uvaxl")
+id = "thunder"
+name = "Thunder"
+description = "Calls lightning to strike enemies"
+price = 50
+metadata/_custom_type_script = "uid://b4pkbpbgxjjj7"
