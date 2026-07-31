@@ -10,7 +10,7 @@ A Godot project following a 2D RPG Udemy tutorial
 - [x] 05 Inventory
 - [x] 06 Player_Stats
 - [x] 07 Create_Enemies
-- [ ] 08 Add_Skills
+- [x] 08 Add_Skills
 - [ ] 09 NPCs
 - [ ] 10 Shop
 - [ ] 11 Crafting
