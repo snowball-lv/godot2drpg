@@ -59,6 +59,12 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if dialogue:
 				EventBus.on_dialogue_started.emit(dialogue)
+				if type != NPCType.IDLE:
+					await EventBus.on_dialogue_finished
+					Refs.hud.open_npc_panel(type)
+			else:
+				if type != NPCType.IDLE:
+					Refs.hud.open_npc_panel(type)
 
 func is_waiting_for_next_move() -> bool:
 	return not timer.is_stopped()

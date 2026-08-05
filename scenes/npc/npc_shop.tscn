@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4i815gph1s0i"]
+
+[ext_resource type="PackedScene" uid="uid://cb5oe0iodbm75" path="res://scenes/npc/npc_simple.tscn" id="1_hm0ec"]
+[ext_resource type="Resource" uid="uid://cykpyr85bvcas" path="res://data/dialogue/shop_dialogue.tres" id="2_4c3yx"]
+[ext_resource type="Texture2D" uid="uid://cwsfnuay7n3t" path="res://Sprites/Actor/Characters/Inspector/SeparateAnim/Idle.png" id="2_xy8wi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c3yx"]
+atlas = ExtResource("2_xy8wi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48i7t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c3yx")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}]
+
+[node name="NPCShop" instance=ExtResource("1_hm0ec")]
+type = 1
+dialogue = ExtResource("2_4c3yx")
+
+[node name="AnimSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_48i7t")

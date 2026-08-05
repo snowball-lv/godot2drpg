@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=3 format=3 uid="uid://cykpyr85bvcas"]
+
+[ext_resource type="Texture2D" uid="uid://dkdqf3xg6ba3l" path="res://Sprites/Actor/Characters/Inspector/Faceset.png" id="1_3ruru"]
+[ext_resource type="Script" uid="uid://bx6n5kqhdx441" path="res://data/dialogue/dialogue_data.gd" id="1_ihs76"]
+
+[resource]
+script = ExtResource("1_ihs76")
+npc_name = "Inspector"
+npc_icon = ExtResource("1_3ruru")
+line = Array[String](["Welcome to my shop!", "I hope you find something nice."])
+metadata/_custom_type_script = "uid://bx6n5kqhdx441"

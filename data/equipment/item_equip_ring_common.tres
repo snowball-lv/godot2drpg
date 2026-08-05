@@ -5,7 +5,8 @@
 
 [resource]
 script = ExtResource("2_mfn0r")
-equip_type = 0
+equip_type = 4
+bonus_damage = 0.0
 type = 4
 is_consumable = false
 max_stack = 1
