@@ -16,6 +16,7 @@ class_name HUD
 @onready var mana_label: Label = %ManaLabel
 
 @onready var shop_panel: Control = $ShopPanel
+@onready var craft_panel: CraftPanel = $CraftPanel
 
 func _ready() -> void:
 	Refs.hud = self
@@ -27,6 +28,8 @@ func open_npc_panel(type: NPC.NPCType) -> void:
 	match type:
 		NPC.NPCType.SHOP:
 			shop_panel.show()
+		NPC.NPCType.CRAFTING:
+			craft_panel.show()
 	
 func equip_skill_to_empty_slot(skill: SkillData) -> void:
 	for i in skill_buttons.size():

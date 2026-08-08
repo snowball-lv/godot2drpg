@@ -13,5 +13,5 @@ icon = ExtResource("1_3ydwl")
 id = "food"
 name = "Noodle"
 description = ""
-price = 0
+price = 5
 metadata/_custom_type_script = "uid://cafwk6ut2aliu"
