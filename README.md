@@ -16,3 +16,9 @@ A Godot project following a 2D RPG Udemy tutorial
 - [x] 11 Crafting
 - [x] 12 Quest
 - [x] 13 Sound_Manager
+
+## Screenshots
+
+![](./screenshot-1.png)
+![](./screenshot-2.png)
+![](./screenshot-3.png)
