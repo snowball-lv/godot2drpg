@@ -13,8 +13,6 @@ A Godot project following a 2D RPG Udemy tutorial
 - [x] 08 Add_Skills
 - [x] 09 NPCs
 - [x] 10 Shop
-- [ ] 11 Crafting
-- [ ] 12 Quest
-- [ ] 13 Sound_Manager
-- [ ] 14 Final_Project
-- [ ] 15 Extra
+- [x] 11 Crafting
+- [x] 12 Quest
+- [x] 13 Sound_Manager
