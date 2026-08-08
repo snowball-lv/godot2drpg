@@ -67,19 +67,23 @@ func _on_button_pressed(craft_button: CraftButton) -> void:
 	button_selected = craft_button
 	amount_selected = 1
 	update_material_information()
+	SoundManager.play(Sound.BUTTON)
 
 func _on_close_button_pressed() -> void:
 	hide()
 	materials_container.hide()
+	SoundManager.play(Sound.BUTTON)
 	
 func _on_remove_button_pressed() -> void:
 	amount_selected -= 1
 	amount_selected = max(amount_selected, 0)
 	update_material_information()
+	SoundManager.play(Sound.BUTTON)
 
 func _on_add_button_pressed() -> void:
 	amount_selected += 1
 	update_material_information()
+	SoundManager.play(Sound.BUTTON)
 
 func _on_craft_button_pressed() -> void:
 	if can_craft_item():
@@ -90,4 +94,5 @@ func _on_craft_button_pressed() -> void:
 		Inventory.add_item(button_selected.data.craft_item, amount_selected)
 		amount_selected = 1
 		update_material_information()
+		SoundManager.play(Sound.BUTTON)
 		

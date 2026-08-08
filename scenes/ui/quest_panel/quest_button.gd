@@ -34,4 +34,5 @@ func _on_quest_progress_updated(quest_id: String, amount: int) -> void:
 func _on_pressed() -> void:
 	if current_progress >= quest_data.quest_target_value:
 		Inventory.add_item(quest_data.quest_item_reward, 1)
+		SoundManager.play(Sound.BUTTON)
 		queue_free()

@@ -22,6 +22,7 @@ Inventory="*res://autoloads/inventory.gd"
 Refs="*res://autoloads/refs.gd"
 GameData="*res://autoloads/game_data.gd"
 Transition="*res://autoloads/transition.tscn"
+SoundManager="*res://autoloads/sound_manager.tscn"
 
 [display]
 

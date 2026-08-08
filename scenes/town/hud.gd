@@ -58,12 +58,16 @@ func toggle_panel(panel: PanelContainer) -> void:
 
 func _on_equipment_button_pressed() -> void:
 	toggle_panel(equipment_panel)
+	SoundManager.play(Sound.BUTTON)
 
 func _on_inventory_button_pressed() -> void:
 	toggle_panel(inventory_panel)
+	SoundManager.play(Sound.BUTTON)
 
 func _on_stats_button_pressed() -> void:
 	toggle_panel(stats_panel)
+	SoundManager.play(Sound.BUTTON)
 
 func _on_skills_button_pressed() -> void:
 	toggle_panel(skills_panel)
+	SoundManager.play(Sound.BUTTON)

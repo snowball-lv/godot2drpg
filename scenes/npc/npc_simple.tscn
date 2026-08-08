@@ -34,7 +34,6 @@ texture = ExtResource("1_vtgdc")
 path_desired_distance = 2.0
 target_desired_distance = 2.0
 path_postprocessing = 1
-debug_enabled = true
 debug_path_custom_color = Color(0.606085, 0.126933, 2.40654e-07, 1)
 
 [node name="AnimSprite" type="AnimatedSprite2D" parent="."]

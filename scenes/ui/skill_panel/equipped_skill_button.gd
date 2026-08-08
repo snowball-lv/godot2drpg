@@ -27,3 +27,4 @@ func _on_pressed() -> void:
 		GameData.skill_slots[number - 1] = null
 		equipped_data = null
 		reset_skill_button()
+		SoundManager.play(Sound.BUTTON)
