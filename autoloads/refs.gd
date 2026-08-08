@@ -10,6 +10,7 @@ const NEW_LEVEL_FX_SCENE = preload("res://scenes/effects/new_level_fx.tscn")
 const DROP_ITEM_SCENE = preload("res://scenes/drop_item/drop_item.tscn")
 const SHOP_BUTTON_SCENE = preload("res://scenes/ui/shop_panel/shop_button.tscn")
 const CRAFT_BUTTON_SCENE = preload("res://scenes/ui/craft_panel/craft_button.tscn")
+const QUEST_BUTTON_SCENE = preload("res://scenes/ui/quest_panel/quest_button.tscn")
 
 func create_damage_fx(pos: Vector2) -> void:
 	create_fx_at_pos(DAMAGE_FX_SCENE, pos)

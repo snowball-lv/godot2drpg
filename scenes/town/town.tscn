@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://cu1w61geboej"]
+[gd_scene load_steps=58 format=4 uid="uid://cu1w61geboej"]
 
 [ext_resource type="Script" uid="uid://cve6tac2amnip" path="res://scenes/town/town.gd" id="1_xbtnt"]
 [ext_resource type="TileSet" uid="uid://dhuo28mf6ex0t" path="res://resources/floor.tres" id="3_wpqog"]
@@ -33,6 +33,7 @@
 [ext_resource type="Resource" uid="uid://dxobper7ix8oj" path="res://data/food/item_food_shrimp.tres" id="26_2e0dp"]
 [ext_resource type="PackedScene" uid="uid://dtxfupn3ppqgp" path="res://scenes/enemy/enemy_mouse.tscn" id="26_o16h7"]
 [ext_resource type="PackedScene" uid="uid://bnppnlj6dhcvn" path="res://data/enemy_octopus.tscn" id="27_iu42p"]
+[ext_resource type="PackedScene" uid="uid://bh82h5tcjvgbk" path="res://scenes/ui/quest_panel/quest_panel.tscn" id="28_486pw"]
 [ext_resource type="PackedScene" uid="uid://cb5oe0iodbm75" path="res://scenes/npc/npc_simple.tscn" id="28_wpqog"]
 [ext_resource type="Resource" uid="uid://chj757050bld" path="res://data/dialogue/testing.tres" id="29_4yhmd"]
 [ext_resource type="PackedScene" uid="uid://c4i815gph1s0i" path="res://scenes/npc/npc_shop.tscn" id="29_67633"]
@@ -1462,6 +1463,9 @@ items = Array[ExtResource("20_8qmit")]([ExtResource("21_486pw"), ExtResource("22
 [node name="CraftPanel" parent="HUD" instance=ExtResource("20_67633")]
 visible = false
 
+[node name="QuestPanel" parent="HUD" instance=ExtResource("28_486pw")]
+visible = false
+
 [node name="DropItem" parent="." instance=ExtResource("20_3sg37")]
 position = Vector2(57, -22)
 item = ExtResource("21_vky2r")
@@ -1507,6 +1511,10 @@ dialogue = ExtResource("29_4yhmd")
 [node name="NPCCraft" parent="NPCs" instance=ExtResource("28_wpqog")]
 position = Vector2(103, -84)
 type = 3
+
+[node name="NPCQuest" parent="NPCs" instance=ExtResource("28_wpqog")]
+position = Vector2(76, -234)
+type = 2
 
 [node name="NPCFighterRed" parent="NPCs" instance=ExtResource("29_b3xbq")]
 position = Vector2(106, -23)

@@ -71,5 +71,6 @@ func _on_health_component_on_health_changed(curr_health: float) -> void:
 
 func _on_health_component_on_dead() -> void:
 	drop_loot()
+	EventBus.on_quest_progress_updated.emit("enemy_10", 1)
 	Refs.player.add_exp(exp_amount)
 	queue_free()
